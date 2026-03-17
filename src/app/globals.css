@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: #2BB9AA; /* Teal from logo droplets */
+  --color-secondary: #EF5A4B; /* Orange/Red from logo text */
+  --color-brand-background: #FAFAFA; /* Off-white for clean look */
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Using serif var for brand font to minimize refactoring */
+  --radius-clay: 4rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-brand-background);
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-shape-2 {
+  border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
+}
+
+.organic-shape-3 {
+  border-radius: 50% 50% 20% 80% / 40% 40% 60% 60%;
+}
+
+.glass-nav {
+  background: rgba(253, 251, 247, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.scribble {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.gallery-spacing {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
