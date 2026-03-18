@@ -39,10 +39,10 @@ export function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: "Inicio", href: "#" },
-    { name: "Sobre Mí", href: "#about" },
-    { name: "Contacto", href: "#contact" },
-    { name: "Galería", href: "#gallery" },
+    { name: "Inicio", href: "/" },
+    { name: "Sobre Mí", href: "/#about" },
+    { name: "Contacto", href: "/#contact" },
+    { name: "Galería", href: "/galeria" },
   ];
 
   return (

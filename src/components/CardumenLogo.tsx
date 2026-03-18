@@ -109,6 +109,26 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
     hidden: { opacity: 0, scale: 0 },
     show: { opacity: 1, scale: 1, transition: { type: "spring" as const, stiffness: 150, damping: 15 } },
   };
+  const textItem = {
+    hidden: { opacity: 0, scale: 0.98, y: 0, rotate: 0 },
+    show: (i: number) => {
+      const amplitude = 6;
+      const duration = 4.8 + (i % 6) * 0.25;
+      const delay = i * 0.05;
+      return {
+        opacity: 1,
+        scale: 1,
+        y: [0, -amplitude, 0, amplitude, 0],
+        rotate: [0, 1.2, 0, -1.2, 0],
+        transition: {
+          opacity: { duration: 0.35 },
+          scale: { type: "spring" as const, stiffness: 180, damping: 18 },
+          y: { duration, repeat: Infinity, delay },
+          rotate: { duration, repeat: Infinity, delay },
+        },
+      };
+    },
+  };
 
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
@@ -131,7 +151,14 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
             animate="show"
           >
             {blackTextPaths.map((d, i) => (
-              <motion.path key={`b-${i}`} d={d} fill="currentColor" className="text-gray-900" variants={item} />
+              <motion.path
+                key={`b-${i}`}
+                d={d}
+                fill="currentColor"
+                className="text-gray-900"
+                variants={textItem}
+                custom={i}
+              />
             ))}
           </motion.g>
         )}
@@ -144,7 +171,14 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
             animate="show"
           >
             {redTextPaths.map((d, i) => (
-              <motion.path key={`r-${i}`} d={d} fill="currentColor" className="text-secondary" variants={item} />
+              <motion.path
+                key={`r-${i}`}
+                d={d}
+                fill="currentColor"
+                className="text-secondary"
+                variants={textItem}
+                custom={i + 3}
+              />
             ))}
           </motion.g>
         )}

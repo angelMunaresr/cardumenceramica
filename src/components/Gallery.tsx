@@ -8,36 +8,29 @@ const galleryItems = [
   {
     id: 1,
     image: "/img/sintitulo1.png",
-    title: "Cuencos Orgánicos",
+    title: "Sirena",
     colSpan: "col-span-12 md:col-span-8",
     height: "h-64 sm:h-96",
   },
   {
     id: 2,
     image: "/img/sintitulo2.png",
-    title: "Floreros Texturados",
+    title: "Origen",
     colSpan: "col-span-12 md:col-span-4",
     height: "h-64 sm:h-96",
   },
   {
     id: 3,
     image: "/img/sintitulo3.png",
-    title: "Tazas Artesanales",
-    colSpan: "col-span-12 md:col-span-4",
+    title: "Eco",
+    colSpan: "col-span-12 md:col-span-6",
     height: "h-80 sm:h-[400px]",
   },
   {
     id: 4,
     image: "/img/sintitulo4.png",
-    title: "Platos",
-    colSpan: "col-span-12 md:col-span-4",
-    height: "h-80 sm:h-[400px]",
-  },
-  {
-    id: 5,
-    image: "/img/sintitulo5.png",
-    title: "Juego de Té",
-    colSpan: "col-span-12 md:col-span-4",
+    title: "Lava",
+    colSpan: "col-span-12 md:col-span-6",
     height: "h-80 sm:h-[400px]",
   },
 ];
@@ -68,7 +61,7 @@ export function Gallery() {
             whileHover={{ x: 5 }}
             className="inline-flex items-center gap-2 text-primary font-medium border-b-2 border-primary/30 hover:border-primary pb-1 transition-all"
           >
-            <Link href="/products" className="flex items-center gap-2">
+            <Link href="/galeria" className="flex items-center gap-2">
               Ver toda la Tienda
               <ArrowRight size={18} />
             </Link>
@@ -86,7 +79,7 @@ export function Gallery() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className={`${item.colSpan} ${item.height} relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-shadow`}
             >
-              <Link href={`/products/${item.id}`} className="block w-full h-full">
+              <Link href={`/producto/${item.id}`} className="block w-full h-full">
                 {/* Overlay: Always present with gradient on mobile for readability, transitions to standard hover behavior on larger screens */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent lg:bg-gray-900/10 lg:bg-none lg:group-hover:bg-gray-900/40 transition-colors z-10" />
                 <img
