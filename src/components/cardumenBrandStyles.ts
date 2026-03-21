@@ -14,8 +14,8 @@ export const cardumenBrandClassNames = {
     "font-sans font-semibold text-[0.70rem] tracking-[0.22em] text-secondary uppercase mt-1",
   // Filled primary action button
   primaryButton:
-    "px-5 py-2.5 bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group shadow-sm shadow-primary/20 rounded-full",
+    "px-5 py-2.5 bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group shadow-sm shadow-primary/20 organic-shape-2",
   // Outline ghost secondary button
   secondaryButton:
-    "px-5 py-2.5 bg-transparent text-primary border border-primary/40 text-sm font-medium hover:bg-primary/5 hover:border-primary transition-all flex items-center justify-center gap-2 group rounded-full",
+    "px-5 py-2.5 bg-transparent text-primary border border-primary/40 text-sm font-medium hover:bg-primary/5 hover:border-primary transition-all flex items-center justify-center gap-2 group organic-shape-2",
 } as const;
