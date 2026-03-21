@@ -5,7 +5,7 @@ import { CardumenLogo } from "./CardumenLogo";
 
 export function Hero() {
   return (
-    <section className="relative min-h-svh pt-20 pb-8 px-6 sm:px-12 md:pt-32 md:pb-20 flex flex-col justify-center bg-brandBackground overflow-hidden">
+    <section className="relative min-h-svh pt-20 pb-8 px-6 sm:px-12 md:pt-32 md:pb-20 flex flex-col justify-start md:justify-center bg-brandBackground overflow-hidden">
       {/* Decorative background blobs */}
       <div className="absolute top-10 md:top-20 right-0 w-48 md:w-96 h-48 md:h-96 bg-primary/20 rounded-[50%_50%_0_50%] rotate-45 -z-10 mix-blend-multiply blur-3xl animate-pulse" />
       <div className="absolute bottom-10 left-0 md:left-10 w-48 md:w-80 h-48 md:h-80 bg-primary/10 rounded-[50%_0_50%_50%] -rotate-45 -z-10 mix-blend-multiply blur-3xl" />
