@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const workSans = Work_Sans({ 
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${workSans.variable} ${montserrat.variable} scroll-smooth`}>
       <body className={`font-sans bg-brandBackground text-gray-900 antialiased selection:bg-primary/20 selection:text-primary min-h-screen`}>
+        <ScrollToTop />
         {children}
       </body>
     </html>
