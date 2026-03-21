@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, MapPin, Users } from "lucide-react";
+import { Clock, MapPin, Users } from "lucide-react";
+import { cardumenBrandClassNames } from "./cardumenBrandStyles";
 
 const workshops = [
   {
@@ -40,7 +41,8 @@ const workshops = [
 
 export function Workshops() {
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-brandBackground relative overflow-hidden">
+    // Bug fix: was id="gallery" (duplicate with Gallery component) — now id="workshops"
+    <section id="workshops" className="py-16 md:py-24 bg-brandBackground relative overflow-hidden">
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/15 organic-shape-1 blur-3xl -z-10" />
       <div className="absolute -bottom-28 -left-24 w-96 h-96 bg-secondary/10 organic-shape-3 blur-3xl -z-10" />
 
@@ -54,17 +56,6 @@ export function Workshops() {
               Viví la experiencia del barro y el fuego
             </h2>
           </motion.div>
-
-          <motion.a
-            href="#contact"
-            initial={{ opacity: 0, x: 16 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ x: 5 }}
-            className="inline-flex items-center gap-2 text-primary font-medium border-b-2 border-primary/30 hover:border-primary pb-1 transition-all"
-          >
-            Consultar fechas y cupos <ArrowRight size={18} />
-          </motion.a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
@@ -75,9 +66,9 @@ export function Workshops() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: idx * 0.05 }}
-              className="group bg-white/70 backdrop-blur-sm border border-gray-200/70 shadow-sm hover:shadow-xl transition-all organic-shape-2 overflow-hidden"
+              className="group bg-white/70 backdrop-blur-sm border border-gray-200/70 shadow-sm hover:shadow-xl transition-all organic-shape-2"
             >
-              <div className="relative h-64 sm:h-72 overflow-hidden">
+              <div className="relative h-64 sm:h-72 overflow-hidden rounded-[inherit]">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10" />
                 <img
                   src={w.image}
@@ -112,18 +103,12 @@ export function Workshops() {
                   ))}
                 </ul>
 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <div className="mt-8">
                   <a
                     href="#contact"
-                    className="flex-1 px-6 py-4 bg-gray-900 text-white font-medium hover:bg-primary transition-colors shadow-lg shadow-black/10 organic-shape-2 text-center"
+                    className={`w-full ${cardumenBrandClassNames.primaryButton} text-center`}
                   >
                     Reservar mi lugar
-                  </a>
-                  <a
-                    href="#contact"
-                    className="flex-1 px-6 py-4 border border-gray-200 text-gray-800 font-medium hover:border-gray-900 hover:bg-gray-50 transition-all organic-shape-2 text-center"
-                  >
-                    Preguntas frecuentes
                   </a>
                 </div>
               </div>
@@ -134,4 +119,3 @@ export function Workshops() {
     </section>
   );
 }
-

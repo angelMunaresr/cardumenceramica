@@ -79,7 +79,7 @@ export function Gallery() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className={`${item.colSpan} ${item.height} relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-shadow`}
             >
-              <Link href={`/producto/${item.id}`} className="block w-full h-full">
+              <Link href={`/products/${item.id}`} className="block w-full h-full">
                 {/* Overlay: Always present with gradient on mobile for readability, transitions to standard hover behavior on larger screens */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent lg:bg-gray-900/10 lg:bg-none lg:group-hover:bg-gray-900/40 transition-colors z-10" />
                 <img

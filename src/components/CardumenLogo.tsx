@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { cardumenBrandColorClassNames } from "./cardumenBrandStyles";
 
 interface CardumenLogoProps {
   className?: string;
@@ -76,7 +77,7 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
           // Asumimos que cualquier path capturado aquí es rojo debido al selector CSS
           return p.w > width * 0.005 && p.h > height * 0.005;
         });
-        
+
         redAll.sort((a, b) => (a.y === b.y ? a.x - b.x : a.y - b.y));
         if (isMounted) setRedTextPaths(redAll.map((p) => p.d));
 
@@ -86,7 +87,7 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
         ).filter(p => {
           return p.w > width * 0.003 && p.h > height * 0.003;
         });
-        
+
         blackAll.sort((a, b) => (a.x === b.x ? a.y - b.y : a.x - b.x));
         if (isMounted) setBlackTextPaths(blackAll.map((p) => p.d));
 
@@ -136,7 +137,13 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
         {dropPaths.length > 0 ? (
           <motion.g variants={container} initial="hidden" animate="show">
             {dropPaths.map((d, i) => (
-              <motion.path key={i} d={d} fill="currentColor" className="text-primary" variants={item} />
+              <motion.path
+                key={i}
+                d={d}
+                fill="currentColor"
+                className={cardumenBrandColorClassNames.primary}
+                variants={item}
+              />
             ))}
           </motion.g>
         ) : (
@@ -155,7 +162,7 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
                 key={`b-${i}`}
                 d={d}
                 fill="currentColor"
-                className="text-gray-900"
+                className={cardumenBrandColorClassNames.neutral}
                 variants={textItem}
                 custom={i}
               />
@@ -175,7 +182,7 @@ export function CardumenLogo({ className = "" }: CardumenLogoProps) {
                 key={`r-${i}`}
                 d={d}
                 fill="currentColor"
-                className="text-secondary"
+                className={cardumenBrandColorClassNames.secondary}
                 variants={textItem}
                 custom={i + 3}
               />

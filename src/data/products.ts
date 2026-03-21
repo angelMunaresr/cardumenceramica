@@ -47,16 +47,6 @@ const products: Product[] = [
         title: "Tamaño y Peso",
         content: "24 × 15 × 12 cm. Peso aproximado: 1.2 kg. Puede variar ligeramente por ser una pieza hecha a mano.",
       },
-      {
-        id: "materials",
-        title: "Material",
-        content: "Gres de alta temperatura. Esmalte satinado con variaciones naturales del horneado.",
-      },
-      {
-        id: "shipping",
-        title: "Envío y Devoluciones",
-        content: "Envío estándar en 3-5 días hábiles. Las piezas personalizadas o hechas a pedido pueden tomar hasta 3 semanas.",
-      },
     ],
   },
   {
@@ -80,16 +70,6 @@ const products: Product[] = [
         id: "dimensions",
         title: "Tamaño",
         content: "Alto: 18cm | Diámetro: 20cm",
-      },
-      {
-        id: "materials",
-        title: "Material y Acabado",
-        content: "Cerámica de alta temperatura con acabado mate. Textura porosa y variaciones naturales.",
-      },
-      {
-        id: "shipping",
-        title: "Envío y Devoluciones",
-        content: "Envío estándar en 3-5 días hábiles.",
       },
     ],
   },
@@ -115,16 +95,6 @@ const products: Product[] = [
         title: "Tamaño",
         content: "Alto: 8cm | Diámetro: 16cm",
       },
-      {
-        id: "materials",
-        title: "Uso y Cuidado",
-        content: "Apto para alimentos. Recomendado: evitar cambios térmicos bruscos.",
-      },
-      {
-        id: "shipping",
-        title: "Envío y Devoluciones",
-        content: "Envío estándar en 3-5 días hábiles.",
-      },
     ],
   },
   {
@@ -148,16 +118,6 @@ const products: Product[] = [
         id: "dimensions",
         title: "Tamaño",
         content: "Alto: 30cm | Diámetro base: 12cm",
-      },
-      {
-        id: "materials",
-        title: "Material",
-        content: "Gres negro texturizado. Retiene agua de forma segura para arreglos florales.",
-      },
-      {
-        id: "shipping",
-        title: "Envío y Devoluciones",
-        content: "Envío especial con embalaje protector en 5-7 días hábiles.",
       },
     ],
   },

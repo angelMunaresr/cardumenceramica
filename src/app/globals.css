@@ -4,6 +4,7 @@
   --color-primary: #2BB9AA; /* Teal from logo droplets */
   --color-secondary: #EF5A4B; /* Orange/Red from logo text */
   --color-brand-background: #FAFAFA; /* Off-white for clean look */
+  --color-sand: #F5EFE0; /* Warm sandy tone for decorative blobs */
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Using serif var for brand font to minimize refactoring */
   --radius-clay: 4rem;
@@ -46,4 +47,23 @@ html {
 .gallery-spacing {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+/* Animated subtle wave for primary CTA buttons */
+@keyframes shimmer-wave {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.btn-shimmer {
+  background: linear-gradient(
+    90deg,
+    #259e91 0%,
+    #2BB9AA 35%,
+    #34bfb1 50%,
+    #2BB9AA 65%,
+    #259e91 100%
+  );
+  background-size: 300% auto;
+  animation: shimmer-wave 5s ease-in-out infinite;
 }

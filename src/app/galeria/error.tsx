@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AlertTriangle, RotateCcw } from "lucide-react";
+import { cardumenBrandClassNames } from "@/components/cardumenBrandStyles";
 
 export default function GaleriaError({
   error,
@@ -36,7 +37,7 @@ export default function GaleriaError({
               <button
                 type="button"
                 onClick={reset}
-                className="mt-6 inline-flex items-center gap-2 h-10 px-4 rounded-full bg-gray-900 text-white hover:bg-primary transition-colors"
+                className={`mt-6 w-full sm:w-auto ${cardumenBrandClassNames.primaryButton}`}
               >
                 <RotateCcw size={16} />
                 Reintentar
@@ -50,4 +51,3 @@ export default function GaleriaError({
     </main>
   );
 }
-

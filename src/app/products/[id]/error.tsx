@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import { cardumenBrandClassNames } from "@/components/cardumenBrandStyles";
 
-export default function ProductoError({
+export default function ProductDetailError({
   error,
   reset,
 }: {
@@ -15,6 +15,7 @@ export default function ProductoError({
   reset: () => void;
 }) {
   useEffect(() => {
+    // Log error to monitoring service in the future
     void error;
   }, [error]);
 
@@ -30,10 +31,10 @@ export default function ProductoError({
             </div>
             <div className="flex-1">
               <h1 className="font-serif text-2xl text-gray-900">
-                No pudimos cargar el producto
+                Could not load the product
               </h1>
               <p className="mt-2 text-gray-600">
-                Intenta de nuevo o vuelve a la galería.
+                Please try again or go back to the gallery.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -43,13 +44,13 @@ export default function ProductoError({
                   className={`w-full sm:w-auto ${cardumenBrandClassNames.primaryButton}`}
                 >
                   <RotateCcw size={16} />
-                  Reintentar
+                  Try again
                 </button>
                 <Link
                   href="/galeria"
-                  className={`w-full sm:w-auto ${cardumenBrandClassNames.primaryButton}`}
+                  className={`w-full sm:w-auto ${cardumenBrandClassNames.secondaryButton}`}
                 >
-                  Volver a la galería
+                  Back to gallery
                 </Link>
               </div>
             </div>

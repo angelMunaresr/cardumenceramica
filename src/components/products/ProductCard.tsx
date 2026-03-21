@@ -4,7 +4,7 @@ import type { Product } from "@/data/products";
 export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
-      href={`/producto/${product.id}`}
+      href={`/products/${product.id}`}
       className="group block rounded-2xl border border-gray-200/60 bg-white/70 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
     >
       <div className="aspect-[4/3] w-full bg-gray-100">
